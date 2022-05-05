@@ -15,6 +15,12 @@
         a {
             all: unset;
         }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1070px;
+            }
+        }
     </style>
 </head>
 
@@ -41,23 +47,26 @@
         </div>
     </nav>
 
-    <section class="container text-center mt-4">
+    <section class="container mt-4">
 
-        <h1 class="col-md-12">
+        <h1 class="col-md-12 text-center">
             SUPER HEADLINE
         </h1>
 
-        <p class="col-md-8 offset-2" style="text-align: center;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur minima illum in natus magni,
-            corporis earum sequi,
-        </p>
+        <div class="w-75 mx-auto">
+            <p class="col-md-12 text-center" style="font-size: 20px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur minima illum in natus magni,
+                corporis earum sequi,
+            </p>
+        </div>
+
     </section>
 
     <section class="container mt-5 ">
 
         <div class="row">
 
-            <div class="col-md-8 mt-5">
+            <div class="col-md-8 d-flex flex-column justify-content-center">
                 <h2>
                     HEADLINE
                 </h2>
@@ -87,8 +96,8 @@
                 <img src="https://picsum.photos/400/400" class="img-fluid" alt="Responsive image">
             </div>
 
-            <div class="col-md-8 mt-5" style="">
-                <h2>
+            <div class="col-md-8 d-flex flex-column justify-content-center " style="">
+                <h2 class="">
                     HEADLINE
                 </h2>
 
@@ -116,6 +125,7 @@
 
         </div>
     </footer>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
