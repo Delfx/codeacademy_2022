@@ -14,10 +14,10 @@
 <body>
 
 
-        <form class="container col-md-6 mt-5">
+        <form method="post" class="container col-md-6 mt-5">
             <div class="form-group">
                 <label for="exampleInputName">Name</label>
-                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name">
+                <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter Name">
             </div>
             <div class="form-group">
                 <label for="exampleInputSurName">Surname</label>
@@ -29,7 +29,7 @@
             </div>
             <div>
                 <label for="exampleSelectVehicle">Select Vehicle</label>
-                <select class="form-control" id="exampleSelectVehicle">
+                <select class="form-control" id="exampleSelectVehicle" name="Vehicle">
                     <option value="Car">Car</option>
                     <option value="Bike">Bike</option>
                     <option value="Scooter">Scooter</option>
@@ -43,7 +43,7 @@
 
             <div>
                 <label for="exampleSelectCity">Select City</label>
-                <select class="form-control" id="exampleSelectCity">
+                <select class="form-control" id="exampleSelectCity" name="city">
                     <option value="Kaunas">Kaunas</option>
                     <option value="Vilnius">Vilnius</option>
                     <option value="Klaipeda">Klaipeda</option>
@@ -53,6 +53,9 @@
             <button type="submit" class="btn btn-primary mt-1">Submit</button>
         </form>
 
+        <form action="">
+          
+        </form>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
