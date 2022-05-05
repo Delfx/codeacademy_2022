@@ -13,16 +13,15 @@
 
 <body>
 
-    <div class="container col-md-6 mt-5">
 
-        <form action="" method="POST">
+        <form method="post" class="container col-md-6 mt-5">
             <div class="form-group">
                 <label for="exampleInputName">Name</label>
-                <input type="name" class="form-control" id="exampleInputName" placeholder="Enter Name">
+                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name">
             </div>
             <div class="form-group">
                 <label for="exampleInputSurName">Surname</label>
-                <input type="name" class="form-control" id="exampleInputSurname" placeholder="Enter Surname">
+                <input type="text" class="form-control" id="exampleInputSurname" placeholder="Enter Surname">
             </div>
             <div class="form-group">
                 <label for="exampleInputNumber">Phone Number</label>
@@ -31,9 +30,9 @@
             <div>
                 <label for="exampleSelectVehicle">Select Vehicle</label>
                 <select class="form-control" id="exampleSelectVehicle">
-                    <option>Car</option>
-                    <option>Bike</option>
-                    <option>Scooter</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Scooter">Scooter</option>
                 </select>
             </div>
 
@@ -45,15 +44,14 @@
             <div>
                 <label for="exampleSelectCity">Select City</label>
                 <select class="form-control" id="exampleSelectCity">
-                    <option>Kaunas</option>
-                    <option>Vilnius</option>
-                    <option>Klaipeda</option>
+                    <option value="Kaunas">Kaunas</option>
+                    <option value="Vilnius">Vilnius</option>
+                    <option value="Klaipeda">Klaipeda</option>
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary mt-1">Submit</button>
         </form>
-    </div>
 
 
 
