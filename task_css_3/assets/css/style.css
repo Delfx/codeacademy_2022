@@ -13,11 +13,6 @@ ul{
 }
 
 
-li:hover{
-    font-weight: bold;
-}
-
-
 li {
     display: inline;
     margin: 5px;
@@ -34,7 +29,13 @@ li, a{
 
 }
 
+
 li:hover, a:hover{
     color: red;
+    font-weight: bold;
+}
+
+li:hover a {
+    color: inherit;
 }
 
