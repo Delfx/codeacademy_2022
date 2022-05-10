@@ -12,6 +12,11 @@ ul{
     list-style-type: none;
 }
 
+
+li:hover{
+    font-weight: bold;
+}
+
 li {
     margin: 5px;
     padding: 5px;
