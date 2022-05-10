@@ -14,7 +14,7 @@ ul{
 
 
 li {
-    background: black;
+    /* background: black; */
     display: inline;
     margin: 5px;
     padding: 5px;
@@ -25,15 +25,15 @@ li {
 }
 
 li, a{
-    color: white;
+    color: blue;
     text-decoration: none;
 
 }
 
 
 li:hover, a:hover{
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     font-weight: bold;
 }
 
