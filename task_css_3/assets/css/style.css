@@ -13,7 +13,8 @@ ul{
 }
 
 li {
-    margin-top: 5px;
+    margin: 5px;
+    padding: 5px;
     width: 200px;
     border-color: blue;
     border-style: solid;
@@ -21,10 +22,8 @@ li {
 }
 
 a{
-    margin: 5px;
     color: blue;
     text-decoration: none;
-    display: inline-block;
 }
 
 a:hover{
