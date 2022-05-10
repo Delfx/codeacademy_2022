@@ -15,22 +15,24 @@ ul{
 
 li:hover{
     font-weight: bold;
+    background-color: white;
+}
+
+li:hover a {
+    color: inherit;
 }
 
 li {
+    background-color: black;
     margin: 5px;
     padding: 5px;
     width: 200px;
-    border-color: blue;
+    /* border-color: blue; */
     border-style: solid;
     border-width: 2px;
 }
 
 a{
-    color: blue;
+    color: white;
     text-decoration: none;
-}
-
-a:hover{
-    font-weight: bold;
 }
