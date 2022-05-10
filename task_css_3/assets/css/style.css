@@ -23,9 +23,9 @@ li {
     margin: 5px;
     padding: 5px;
     width: 200px;
-    border-color: blue;
+    border-color: black;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 li, a{
