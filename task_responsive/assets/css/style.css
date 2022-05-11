@@ -1,0 +1,22 @@
+@media only screen and (max-width: 480px) {
+    .text_color {
+      color: red;
+    }
+  }
+
+
+  @media (min-width: 480px) and (max-width: 800px) {
+    .text_color {
+      color: green;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .text_color {
+      color: blue;
+    }
+  }
+
+
+
+  
