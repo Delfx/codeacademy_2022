@@ -4,22 +4,22 @@
 }
 
 .child_div {
-  width: 33.33%;
+  width: 100%;
   height: 450px;
   background-color: green;
 }
 
-@media only screen and (max-width: 785px) {
+@media (min-width: 785px) {
   .child_div {
     background-color: blue;
-    width: 100%;
+    width: 50%;
     height: 250px;
   }
 }
 
-@media (min-width: 786px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
   .child_div {
-    width: 50%;
+    width: 33.33%;
     height: 350px;
     background-color: yellow;
   }
