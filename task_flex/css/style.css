@@ -86,7 +86,7 @@
         width: 100%;
         display: flex;
         flex-flow: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
   
     
@@ -168,8 +168,8 @@
 
         width: 100%;
         display: flex;
-        flex-flow: wrap;
-        justify-content: center;
+        flex-flow: nowrap;
+        justify-content: space-between;
         align-items: center;
   
     
@@ -177,7 +177,7 @@
 
     .article_grey_1, .article_grey_2, .article_grey_3, .article_grey_4{
         margin-top: 1vh;
-        margin-right: 1vh;
+        /* margin-right: 1vh; */
         width: 24%;
         height: 20vh;
         background: grey;
