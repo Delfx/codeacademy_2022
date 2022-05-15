@@ -18,6 +18,7 @@ li {
 li>a {
     color: blue;
     text-decoration: none;
+    display: block;
 }
 
 li:hover {
