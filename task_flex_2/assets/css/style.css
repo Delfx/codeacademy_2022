@@ -1,0 +1,36 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    gap: 0.5rem;
+}
+
+li {
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+li>a {
+    color: blue;
+    text-decoration: none;
+}
+
+li:hover {
+    color: white;
+    background-color: grey;
+}
+
+li:hover a {
+    color: inherit;
+}
+
+@media (min-width: 40rem) {   
+    .menu{
+        flex-direction: row;
+    }
+}
