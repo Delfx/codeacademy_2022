@@ -1,16 +1,37 @@
 .icon-border {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
-    -webkit-box-pack:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-    width:30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0);
-    color: black;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.text-size {
+    font-size: 20rem;
+    color: white;
+    -webkit-text-fill-color: black;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: white;
+}
+
+.card-color {
+    background-color: black;
+}
+
+.img-grayscale {
+    filter: grayscale(100%);
 }
