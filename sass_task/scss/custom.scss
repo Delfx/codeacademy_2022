@@ -1,0 +1,31 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h6 {
+    color: #73829e;
+}
+
+.included > h5 {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.sum-euro {
+    margin: 0;
+}
+
+.btn-outline-primary {
+    color: rgb(120, 28, 240);
+    --bs-btn-border-color: rgb(120, 28, 240);
+    --bs-btn-hover-bg: rgb(120, 28, 240);
+}
