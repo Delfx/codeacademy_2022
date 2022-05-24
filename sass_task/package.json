@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.0-beta1"
+    "bootstrap": "^5.2.0-beta1",
+    "sass": "^1.52.1"
+  },
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded ./scss:./css"
   }
 }
