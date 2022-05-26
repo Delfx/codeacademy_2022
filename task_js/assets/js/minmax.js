@@ -19,3 +19,6 @@ console.log(numbers)
 console.log(Math.min.apply(Math, numbers));
 console.log(Math.max.apply(Math, numbers));
 
+
+
+
