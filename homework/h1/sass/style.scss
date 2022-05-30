@@ -23,6 +23,10 @@ body {
     display: flex;
 }
 
+.flex-nav{
+    display: block;
+}
+
 header {
     padding: 3.2%;
     padding-right: 4.3%;
@@ -53,6 +57,11 @@ header {
         }
         .icon{
             color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3.2%;
+
         }
     }
 }
@@ -70,6 +79,10 @@ header {
 }
 
 @include tablet {
+    .flex-nav{
+        display: flex;
+    }
+
     header {
         ul {
             .nav-text {
@@ -96,8 +109,13 @@ header {
 }
 
 @include desktop {
+    .flex-nav{
+        display: flex;
+    }
+    
     header {
         ul {
+            display: flex;
             .nav-text {
                 display: flex;
                 flex-direction: row;

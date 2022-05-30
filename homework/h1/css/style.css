@@ -135,7 +135,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -399,6 +400,10 @@ body {
   display: flex;
 }
 
+.flex-nav {
+  display: block;
+}
+
 header {
   padding: 3.2%;
   padding-right: 4.3%;
@@ -426,6 +431,10 @@ header ul .nav-text a {
 }
 header ul .icon {
   color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3.2%;
 }
 
 .imgrow {
@@ -436,10 +445,15 @@ header ul .icon {
 .imgrow img {
   width: 45%;
   height: 360px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .flex-nav {
+    display: flex;
+  }
+
   header ul .nav-text {
     display: flex;
     flex-direction: row;
@@ -456,10 +470,18 @@ header ul .icon {
   .imgrow img {
     width: 30%;
     height: 330px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media (min-width: 1200px) {
+  .flex-nav {
+    display: flex;
+  }
+
+  header ul {
+    display: flex;
+  }
   header ul .nav-text {
     display: flex;
     flex-direction: row;
@@ -474,8 +496,7 @@ header ul .icon {
   }
   .imgrow img {
     width: 22%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
