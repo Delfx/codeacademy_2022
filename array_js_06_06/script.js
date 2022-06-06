@@ -210,15 +210,16 @@ const division = (num1, num2) => num1 / num2;
 function calculateValue(num1, num2, action) {
 
   if (!isNaN(num1) && !isNaN(num2)) {
+
     if (action == 'addition') {
-      console.log(addition(num1, num2));
-    }else if(action == 'multiplication'){
-      console.log(multiplication(num1, num2));
-    }else if(action == 'subtraction'){
-      console.log(subtraction(num1, num2));
-    }else if(action == 'division') {
-      console.log(division(num1, num2));
-    }else{
+      return addition(num1, num2);
+    } else if (action == 'multiplication') {
+      return multiplication(num1, num2);
+    } else if (action == 'subtraction') {
+      return subtraction(num1, num2);
+    } else if (action == 'division') {
+      return division(num1, num2);
+    } else {
       return 402
     }
   } return 404
@@ -226,4 +227,4 @@ function calculateValue(num1, num2, action) {
 }
 
 
-calculateValue(16, 8, 'division')
+console.log(calculateValue(2, 2, 'division'));
