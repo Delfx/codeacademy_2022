@@ -135,12 +135,13 @@ console.log(foundNumbersinArr(arr2));
 
 
 // 10. Sukurkite funkciję checkIfAllSmaller(arr, max), BE MASYVO METODŲ, kuri patikrintų ar visi skaičiai masyve yra didesni negu perduota reikšmė max;
-let arr1 = [3, 3, 6, 9, 5];
+let arr1 = [6, 1, 6, 9, 9];
 // Iškvietus funkciją checkIfAllSmaller(arr1, 5) rezultata bus: False
 
 let bigerNumbersCount = 0;
 
 function checkIfAllSmaller(arr, max) {
+
   arr.forEach(element => {
     if (element > max) {
       bigerNumbersCount++
@@ -149,9 +150,12 @@ function checkIfAllSmaller(arr, max) {
   if (bigerNumbersCount == arr.length) {
     return true
   } return false
+
 }
 
-console.log(checkIfAllSmaller(arr1, 3));
+console.log('10 uzduotis ' + checkIfAllSmaller(arr1, 3));
+
+
 
 // 11. Parašykite funkciją filteredByLetter, kuri turi du parametrus: 1. masyvas; 2. raidė. Funkcija sukuria ir grąžina naują masyvą, kuriame yra visi masyvo, nurodyto kaip pirmas parametras elemntai, kuriuose galima rasti antru paramatetru nurodytą raidę.
 // Testuosime šį masyvą
