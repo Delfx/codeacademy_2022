@@ -179,12 +179,12 @@ function filteredByLetter(arr, letter) {
   arr.forEach(element => {
     if (element.indexOf(letter) !== -1 || element.indexOf(letter.toUpperCase()) !== -1) {
       filteredCities.push(element);
-    }
+    } 
   });
   return filteredCities;
 }
 
-console.log(filteredByLetter(citiesOfLithuania, 'v'));
+console.log(filteredByLetter(citiesOfLithuania, 'j'));
 
 
 
