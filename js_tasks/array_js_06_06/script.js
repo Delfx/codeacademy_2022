@@ -135,7 +135,7 @@ console.log(foundNumbersinArr(arr2));
 
 
 // 10. Sukurkite funkciję checkIfAllSmaller(arr, max), BE MASYVO METODŲ, kuri patikrintų ar visi skaičiai masyve yra didesni negu perduota reikšmė max;
-let arr1 = [6, 1, 6, 9, 9];
+let arr1 = [22, 12, 6, 9, 9];
 // Iškvietus funkciją checkIfAllSmaller(arr1, 5) rezultata bus: False
 
 let bigerNumbersCount = 0;
@@ -151,9 +151,11 @@ function checkIfAllSmaller(arr, max) {
     return true
   } return false
 
+
+
 }
 
-console.log('10 uzduotis ' + checkIfAllSmaller(arr1, 3));
+console.log('10 uzduotis ' + checkIfAllSmaller(arr1, 2));
 
 
 
@@ -179,7 +181,7 @@ function filteredByLetter(arr, letter) {
   arr.forEach(element => {
     if (element.indexOf(letter) !== -1 || element.indexOf(letter.toUpperCase()) !== -1) {
       filteredCities.push(element);
-    } 
+    }
   });
   return filteredCities;
 }
@@ -213,19 +215,25 @@ const division = (num1, num2) => num1 / num2;
 
 function calculateValue(num1, num2, action) {
 
+  const action = [addition, multiplication, subtraction, division];
+
   if (!isNaN(num1) && !isNaN(num2)) {
 
-    if (action == 'addition') {
-      return addition(num1, num2);
-    } else if (action == 'multiplication') {
-      return multiplication(num1, num2);
-    } else if (action == 'subtraction') {
-      return subtraction(num1, num2);
-    } else if (action == 'division') {
-      return division(num1, num2);
-    } else {
-      return 402
-    }
+
+
+
+
+    // if (action == 'addition') {
+    //   return addition(num1, num2);
+    // } else if (action == 'multiplication') {
+    //   return multiplication(num1, num2);
+    // } else if (action == 'subtraction') {
+    //   return subtraction(num1, num2);
+    // } else if (action == 'division') {
+    //   return division(num1, num2);
+    // } else {
+    //   return 402
+    // }
   } return 404
 
 }
