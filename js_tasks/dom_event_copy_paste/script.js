@@ -9,5 +9,5 @@ function copyPaste (){
 }
 
 
-buttonCopy.addEventListener('click', copyPaste)
+buttonCopy?.addEventListener('click', copyPaste)
 
