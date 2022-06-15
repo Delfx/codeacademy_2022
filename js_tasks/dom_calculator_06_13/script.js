@@ -18,7 +18,7 @@ function calculatePlus() {
   if(isNaN(inputNumber.value)){
     resultValue.textContent = 'Įveskite skaičių'
   }else{
-    let newInputinField = parseInt(inputNumber.value);
+    let newInputinField = Number(inputNumber.value);
     numberFirst += newInputinField;
     resultValue.textContent = numberFirst;
   }
@@ -38,7 +38,7 @@ function calculateMultiplay() {
   if(isNaN(inputNumber.value)){
     resultValue.textContent = 'Įveskite skaičių'
   }else{
-    let newInputinField = parseInt(inputNumber.value);
+    let newInputinField = Number(inputNumber.value);
     if (numberFirst == 0) {
       numberFirst = newInputinField;
       resultValue.textContent = newInputinField;
@@ -53,10 +53,15 @@ function calculateDivide() {
   if(isNaN(inputNumber.value)){
     resultValue.textContent = 'Įveskite skaičių'
   }else{
-    let newInputinField = parseInt(inputNumber.value);
+    let newInputinField = Number(inputNumber.value);
     if (numberFirst == 0) {
-      numberFirst = newInputinField;
-      resultValue.textContent = newInputinField;
+      if (newInputinField == 0){
+        resultValue.textContent = 'Dalyba iš nulio negalima'
+      }else {
+        numberFirst = newInputinField;
+        resultValue.textContent = newInputinField;
+      }
+
     } else {
       numberFirst /= newInputinField;
       resultValue.textContent = numberFirst;
