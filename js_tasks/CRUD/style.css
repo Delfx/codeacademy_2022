@@ -1,0 +1,28 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#client-field-set{
+  margin-top: 2rem;
+}
+
+#companies > tbody > tr > button:nth-child(n+4):nth-child(-n+5){
+  margin: 0.3rem;
+}
+
+#edit-Buttons-InFieldset > button {
+  margin: 0.3rem;
+}

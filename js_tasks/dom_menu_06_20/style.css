@@ -1,0 +1,19 @@
+.img-container{
+    width: 60%;
+    /* height: 30%; */
+}
+
+.clock-container{
+    font-weight: 500;
+    font-size: 10rem;
+}
+
+.conformation-text {
+    color: green;
+    display: none;
+}
+
+.reject-text{
+    color: red;
+    display: none;
+}

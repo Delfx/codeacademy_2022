@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <table id="companies">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <fieldset id="client-field-set">
+        <legend>Client:</legend>
+        <label for="fname">Company:</label>
+        <input type="text" id="fcompany" name="fcompany" value="Ernst Handel"><br><br>
+        <label for="lname">Contact:</label>
+        <input type="text" id="lcontact" name="lcontact" value="Helen Bennett"><br><br>
+        <label for="email">Country:</label>
+        <input type="text" id="lcountry" name="lcountry" value="Canada"><br><br>
+        <button id="submitClient" type="submit">Submit</button>
+    </fieldset>
+</body>
+
+</html>
