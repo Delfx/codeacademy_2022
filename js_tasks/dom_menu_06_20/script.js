@@ -37,8 +37,10 @@ function showConfirmation() {
 
     if (inputName.value != '' && inputEmail != '') {
         confirmedText.style.display = 'block'
+        rejectedText.style.display = 'none'
     } else {
         rejectedText.style.display = 'block'
+        confirmedText.style.display = 'none'
     }
 }
 
