@@ -23,6 +23,10 @@ tr:nth-child(even) {
   margin: 0.3rem;
 }
 
+#edit-Buttons-InFieldset{
+  display: none;
+}
+
 #edit-Buttons-InFieldset > button {
   margin: 0.3rem;
 }

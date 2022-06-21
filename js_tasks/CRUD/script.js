@@ -44,6 +44,7 @@ function editButtonAction(editButton) {
     editButton.addEventListener('click', (eventFromEditButton) => {
         document.querySelector('#companies').style.display = 'none';
         document.querySelector('#submitClient').style.display = 'none';
+        document.querySelector('#edit-Buttons-InFieldset').style.display = 'block';
         addClientAllInput[0].value = eventFromEditButton.path[1].querySelectorAll('td')[0].textContent
         addClientAllInput[1].value = eventFromEditButton.path[1].querySelectorAll('td')[1].textContent
         addClientAllInput[2].value = eventFromEditButton.path[1].querySelectorAll('td')[2].textContent
@@ -53,24 +54,14 @@ function editButtonAction(editButton) {
 }
 
 function editButtonsInFieldset(eventFromEditButton) {
-    const fieldSet = document.querySelector('#client-field-set');
+    const applyButton = document.querySelectorAll('#edit-Buttons-InFieldset > button')[0];
+    const rejectButton = document.querySelectorAll('#edit-Buttons-InFieldset > button')[1];
 
-    const buttonContainer = document.createElement('div')
-    buttonContainer.setAttribute('id', 'edit-Buttons-InFieldset');
-
-    const applyButton = document.createElement('button');
-    applyButton.textContent = 'Apply';
-    buttonContainer.appendChild(applyButton);
-    fieldSet.appendChild(buttonContainer)
-
-    const rejectButton = document.createElement('button');
-    rejectButton.textContent = 'Back';
-    buttonContainer.appendChild(rejectButton);
-    fieldSet.appendChild(buttonContainer)
+    console.log(applyButton);
+    console.log(rejectButton);
 
     rejectButtonAction(rejectButton);
     applyButtonAction(applyButton, eventFromEditButton);
-
 }
 
 
@@ -78,26 +69,28 @@ function rejectButtonAction(rejectButton) {
     rejectButton.addEventListener('click', (e) => {
         document.querySelector('#companies').style.display = 'table';
         document.querySelector('#submitClient').style.display = 'block';
-        document.querySelector('#edit-Buttons-InFieldset').style.display= 'none';
+        document.querySelector('#edit-Buttons-InFieldset').style.display = 'none';
     })
 }
 
-function applyButtonAction(applyButton, eventFromEdditButton){
+function applyButtonAction(applyButton, eventFromEdditButton) {
 
-    applyButton.addEventListener('click', (e) =>{
+    applyButton.addEventListener('click', (e) => {
 
-        console.log(eventFromEdditButton);
+        console.log(eventFromEdditButton.path[1].querySelectorAll('td')[0].textContent);
+        console.log(addClientAllInput[2].value);
 
-        // e.path[1].querySelectorAll('td')[0].textContent = addClientAllInput[0]
-        // e.path[1].querySelectorAll('td')[1].textContent = addClientAllInput[1]
-        // e.path[1].querySelectorAll('td')[2].textContent = addClientAllInput[2]
+        eventFromEdditButton.path[1].querySelectorAll('td')[0].textContent = addClientAllInput[0].value;
+        eventFromEdditButton.path[1].querySelectorAll('td')[1].textContent = addClientAllInput[1].value;
+        eventFromEdditButton.path[1].querySelectorAll('td')[2].textContent = addClientAllInput[2].value;
 
         document.querySelector('#companies').style.display = 'table';
         document.querySelector('#submitClient').style.display = 'block';
-        document.querySelector('#edit-Buttons-InFieldset').style.display= 'none';
-       
+        document.querySelector('#edit-Buttons-InFieldset').style.display = 'none';
+
+
     })
-        
+
 }
 
 function actionButtons(tr) {
