@@ -88,7 +88,6 @@ function applyButtonAction(applyButton, eventFromEdditButton) {
         document.querySelector('#submitClient').style.display = 'block';
         document.querySelector('#edit-Buttons-InFieldset').style.display = 'none';
 
-
     })
 
 }
