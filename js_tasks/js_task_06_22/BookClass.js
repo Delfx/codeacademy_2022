@@ -1,4 +1,4 @@
-class BookClas {
+class BookClass {
 
     constructor(name, author, year) {
         this.name = name;
