@@ -58,9 +58,15 @@ function createProductsCards(products) {
     return products.map(element => element.getNameAndPrice());
 }
 
+function showNameAndSalePercent(products) {
+    return products.map(p => p.getNameAndSalePercent())
+}
+
 function filterHaveDiscount(products) {
     return products.filter(p => p.isSalePrice())
 }
+
+
 
 // function getNameAndSalePercent() {
 //     return currentProducts.map(product => new ProductsClass(product.name, product.price, product.salePrice).getNameAndSalePercent());
@@ -68,9 +74,9 @@ function filterHaveDiscount(products) {
 
 console.log(createProductsCards(currentProducts));
 
-console.log(filterHaveDiscount(currentProducts)[2]);
+console.log(filterHaveDiscount(currentProducts));
 
-
+console.log(showNameAndSalePercent(currentProducts));
 // console.log(getNameAndSalePercent());
 
 
