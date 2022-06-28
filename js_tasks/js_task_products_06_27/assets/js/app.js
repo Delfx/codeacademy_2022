@@ -71,7 +71,7 @@ const currentProducts = [
             'Shoes', 'Adidas'
         ]
     },
-].map(product => new ProductsClass(product.name, product.price, product.salePrice, product.category))
+].map(product => new ProductsClass(product.name, product.price, product.salePrice, product.categories))
 
 
 function getProductsFilterPrice(products, filterSum, fromTo) {
@@ -107,21 +107,13 @@ function getProductsFilterPrice(products, filterSum, fromTo) {
 
 function getProductsFilterByCategory(products, filterName){
 
-    return products.filter(p => p)
-
-
-    // for (let index = 0; index < products.length; index++) {
-    //     const p = products[index];
-
-    //     if(filterName){
-    //        return products.filter(p => p.categories.some(category => category.categories == filterName))
-    //     }
-    // }
+    if(filterName){
+        return products.filter(p => p.category.some(c => c == filterName))
+    }else{
+        return 505
+    }
 
 }
-
-// beautyProducts = temp1.filter(product => product.categories.some(cat => cat.id === 43))
-
 
 function createProductsCards(products) {
     return products.map(element => element.getNameAndPrice());
@@ -135,16 +127,18 @@ function filterHaveDiscount(products) {
     return products.filter(p => p.isSalePrice())
 }
 
-console.log(getProductsFilterByCategory(currentProducts, 'Nike'));
+console.log(getProductsFilterByCategory(currentProducts, 'Pants'));
 
-// console.log(getProductsFilterPrice(currentProducts));
+console.log(getProductsFilterPrice(currentProducts));
+
+console.log(createProductsCards(currentProducts));
+
+console.log(filterHaveDiscount(currentProducts));
+
+console.log(showNameAndSalePercent(currentProducts));
 
 
-// console.log(createProductsCards(currentProducts));
 
-// console.log(filterHaveDiscount(currentProducts));
-
-// console.log(showNameAndSalePercent(currentProducts));
 
 // function getNameAndSalePercent() {
 //     return currentProducts.map(product => new ProductsClass(product.name, product.price, product.salePrice).getNameAndSalePercent());
