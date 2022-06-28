@@ -129,7 +129,7 @@ function filterHaveDiscount(products) {
 
 console.log(getProductsFilterByCategory(currentProducts, 'Pants'));
 
-console.log(getProductsFilterPrice(currentProducts));
+console.log(getProductsFilterPrice(currentProducts, 30));
 
 console.log(createProductsCards(currentProducts));
 
