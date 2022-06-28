@@ -27,7 +27,7 @@ const currentProducts = [
         name: 'Nike Pants',
         price: 30,
         salePrice: 20,
-        category: [
+        categories: [
             'Pants', 'Nike'
         ]
     },
@@ -35,7 +35,7 @@ const currentProducts = [
         name: 'Nike T-shirts',
         price: 40,
         salePrice: null,
-        category: [
+        categories: [
             'T-shirts', 'Nike'
         ]
     },
@@ -43,7 +43,7 @@ const currentProducts = [
         name: 'Nike Shoes',
         price: 140,
         salePrice: 30,
-        category: [
+        categories: [
             'Shoes', 'Nike'
         ]
     },
@@ -51,7 +51,7 @@ const currentProducts = [
         name: 'Adidas Pants',
         price: 20,
         salePrice: null,
-        category: [
+        categories: [
             'Pants', 'Adidas'
         ]
     },
@@ -59,7 +59,7 @@ const currentProducts = [
         name: 'Adidas T-shirts',
         price: 30,
         salePrice: 10,
-        category: [
+        categories: [
             'T-shirts', 'Adidas'
         ]
     },
@@ -67,7 +67,7 @@ const currentProducts = [
         name: 'Adidas Shoes',
         price: 100,
         salePrice: 50,
-        category: [
+        categories: [
             'Shoes', 'Adidas'
         ]
     },
@@ -80,22 +80,47 @@ function getProductsFilterPrice(products, filterSum, fromTo) {
     for (let index = 0; index < products.length; index++) {
         const p = products[index];
         if (p.salePrice == null) {
-            if (fromTo == null) {
+            if (!isNaN(fromTo)) {
+                return products.filter(pfilter => pfilter.price >= fromTo)
+            } else if (fromTo == 'from') {
+                return products.filter(pfilter => pfilter.price <= filterSum)
+            } else if (fromTo == 'to') {
+                return products.filter(pfilter => pfilter.price >= filterSum)
+            } else {
                 return products.filter(pfilter => pfilter.price == filterSum)
+            }
+        } else {
+            if (!isNaN(fromTo)) {
+                return products.filter(pfilter => pfilter.salePrice >= fromTo)
+            } else if (fromTo == 'from') {
+                return products.filter(pfilter => pfilter.salePrice <= filterSum)
+            } else if (fromTo == 'to') {
+                return products.filter(pfilter => pfilter.salePrice >= filterSum)
+            } else {
+                return products.filter(pfilter => pfilter.salePrice == filterSum)
             }
         }
     }
 
-    products.forEach(p => {
-        if (p.salePrice == null) {
-            if (fromTo == null) {
-                return products.filter(pfilter => pfilter.price == filterSum)
-            } 
-        }
+}
 
-    });
+
+function getProductsFilterByCategory(products, filterName){
+
+    return products.filter(p => p)
+
+
+    // for (let index = 0; index < products.length; index++) {
+    //     const p = products[index];
+
+    //     if(filterName){
+    //        return products.filter(p => p.categories.some(category => category.categories == filterName))
+    //     }
+    // }
 
 }
+
+// beautyProducts = temp1.filter(product => product.categories.some(cat => cat.id === 43))
 
 
 function createProductsCards(products) {
@@ -110,16 +135,10 @@ function filterHaveDiscount(products) {
     return products.filter(p => p.isSalePrice())
 }
 
+console.log(getProductsFilterByCategory(currentProducts, 'Nike'));
 
+// console.log(getProductsFilterPrice(currentProducts));
 
-// function getNameAndSalePercent() {
-//     return currentProducts.map(product => new ProductsClass(product.name, product.price, product.salePrice).getNameAndSalePercent());
-// }
-
-
-console.log(getProductsFilterPrice(currentProducts, 20));
-
-// console.log('labas');
 
 // console.log(createProductsCards(currentProducts));
 
@@ -127,6 +146,9 @@ console.log(getProductsFilterPrice(currentProducts, 20));
 
 // console.log(showNameAndSalePercent(currentProducts));
 
+// function getNameAndSalePercent() {
+//     return currentProducts.map(product => new ProductsClass(product.name, product.price, product.salePrice).getNameAndSalePercent());
+// }
 
 
 
