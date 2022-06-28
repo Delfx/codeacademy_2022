@@ -77,8 +77,7 @@ const currentProducts = [
 function getProductsFilterPrice(products, filterSum, fromTo) {
 
 
-    for (let index = 0; index < products.length; index++) {
-        const p = products[index];
+    for (const p of products) {
         if (p.salePrice == null) {
             if (!isNaN(fromTo)) {
                 return products.filter(pfilter => pfilter.price >= fromTo)
