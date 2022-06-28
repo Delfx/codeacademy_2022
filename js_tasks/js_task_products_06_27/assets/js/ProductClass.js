@@ -19,11 +19,7 @@ class Products {
         return this.salePrice
     }
 
-    
-
 }
-
-
 
 
 export default Products;
