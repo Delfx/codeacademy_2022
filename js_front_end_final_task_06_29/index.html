@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>js Front end final task</title>
 </head>
@@ -53,12 +54,117 @@
                     <li>class add/remove</li>
                 </ul>
             </div>
-            <div class="card-body d-flex justify-content-center">
-                <div class="input-group">
+            <div class="card-body">
+                <form action="" class="was-validated">
+                    <div class="mb-3 mt-3 row">
+                        <label for="email" class="form-label col-md-2">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="uemail" placeholder="Enter email" name="email"
+                                required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback" id="checkEmail">Please check Email</div>
+                        </div>
+
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="phone" class="form-label col-md-2">Phone Number</label>
+                        <div class="col-md-10">
+                            <input type="tel" pattern="+[0-9]{3}[0-9]{8}" class="form-control" id="uphone"
+                                placeholder="Enter Phone Number" name="phone" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback" id="checkNumber">Please check phone Number</div>
+                        </div>
+                    </div>
+                    <div class="offset-md-2">
+                        <button type="submit" class="btn btn-outline-secondary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-header">
+                Paspaudus mygtuką užblokuokite/atblokuokite <em class="danger text-danger"> input </em>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-danger" type="button" id="button-block">Block</button>
+                    <input type="text" class="form-control" id="readonly-input"
+                        placeholder="I'm input! You can try to enter something..."
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <button class="btn btn-outline-success" type="button" id="button-unblock">UnBlock</button>
                 </div>
             </div>
         </div>
 
+        <div class="card mt-2">
+            <div class="card-header">
+                Užvedus ant paveikliuko pakeiskite jį
+                <ul>
+                    <li><a href="https://i.imgur.com/PLDVxza.jpg">https://i.imgur.com/PLDVxza.jpg</a></li>
+                    <li><a href="https://i.imgur.com/0DElr0H.jpg">https://i.imgur.com/0DElr0H.jpg</a></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="text-center border-5">
+                    <img src="https://i.imgur.com/0DElr0H.jpg" class="border" id="first-picture" alt="">
+                    <img src="https://i.imgur.com/PLDVxza.jpg" class="border" id="second-picture" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-header">
+                Paspaudus ant mygtuko turi "iškristi" meniu su punktais. Paspaudus punktą turi įvykti veiksmas
+            </div>
+            <div class="card-body">
+                <div class="text-end" id="lorum-text">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, excepturi.</h5>
+                    <p class="text-secondary">- Someone famous in Sour</p>
+                </div>
+                <div>
+
+                    <div class="btn-group" id="cursors-button">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Cursors
+                        </button>
+                        <ul class="dropdown-menu" id="cursors-dropdown">
+                            <li value="1" class="dropdown-item">pointer</li>
+                            <li value="2" class="dropdown-item">text</li>
+                            <li value="3" class="dropdown-item">copy</li>
+                            <li value="4" class="dropdown-item">foo</li>
+                            <li value="5" class="dropdown-item">help</li>
+                            <li value="6" class="dropdown-item">crosshair</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group" >
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Colors
+                        </button>
+                        <ul class="dropdown-menu" id="color-dropdown">
+                            <li value="1" class="dropdown-item">Red</li>
+                            <li value="2" class="dropdown-item">Green</li>
+                            <li value="3" class="dropdown-item">Blue</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Borders
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li value="1" class="dropdown-item">Red</li>
+                            <li value="2" class="dropdown-item">Green</li>
+                            <li value="3" class="dropdown-item">Blue</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 

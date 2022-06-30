@@ -11904,4 +11904,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+#second-picture {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
