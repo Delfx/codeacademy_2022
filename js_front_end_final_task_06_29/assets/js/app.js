@@ -85,21 +85,63 @@ secondPicture.addEventListener('mouseleave', () => {
     firsPicture.style.display = 'inline'
 })
 
-//style button functions
+//style function to change text style
 const textToStyle = document.querySelector('#lorum-text');
+const cursorsButton = document.querySelector('#cursors-dropdown');
 const colorButton = document.querySelector('#color-dropdown');
+const borderButton = document.querySelector('#border-dropdown');
+const resetButton = document.querySelector('#reset-all-button')
 
 
-colorButton.addEventListener('click', (e) => {
+//Event for style Cursors change 
+cursorsButton.addEventListener('click', (e) => {
 
-    if(e.target.value == 1){
-        textToStyle.setAttribute("style","color:red !important")
+    if (e.target.value == 1) {
+        textToStyle.style.cursor = 'pointer'
     }else if(e.target.value == 2){
-        textToStyle.setAttribute("style","color:green !important")
+        textToStyle.style.cursor = 'text'
     }else if(e.target.value == 3){
-        textToStyle.setAttribute("style","color:blue !important")
+        textToStyle.style.cursor = 'copy'
+    }else if(e.target.value == 4){
+        textToStyle.style.cursor = 'help'
+    }else if(e.target.value == 5){
+        textToStyle.style.cursor = 'crosshair'
     }
-    
 })
 
+//Event for style color change 
+colorButton.addEventListener('click', (e) => {
 
+    if (e.target.value == 1) {
+        textToStyle.style.color = 'red'
+    } else if (e.target.value == 2) {
+        textToStyle.style.color = 'green'
+    } else if (e.target.value == 3) {
+        textToStyle.style.color = 'blue'
+    }
+
+})
+
+//Event for style Border change 
+borderButton.addEventListener('click', (e) => {
+
+    if (e.target.value == 1) {
+        textToStyle.style.border = 'solid'
+        textToStyle.style.borderColor = 'red'
+    } else if (e.target.value == 2) {
+        textToStyle.style.border = 'solid'
+        textToStyle.style.borderColor = 'green'
+    } else if (e.target.value == 3) {
+        textToStyle.style.border = 'solid'
+        textToStyle.style.borderColor = 'blue'
+    }
+
+})
+
+//Event for reset all style 
+
+resetButton.addEventListener('click', (e)=>{
+    textToStyle.style.border = 'none'
+    textToStyle.style.color = 'black'
+    textToStyle.style.cursor = 'auto'
+})

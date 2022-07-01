@@ -133,13 +133,12 @@
                             <li value="1" class="dropdown-item">pointer</li>
                             <li value="2" class="dropdown-item">text</li>
                             <li value="3" class="dropdown-item">copy</li>
-                            <li value="4" class="dropdown-item">foo</li>
-                            <li value="5" class="dropdown-item">help</li>
-                            <li value="6" class="dropdown-item">crosshair</li>
+                            <li value="4" class="dropdown-item">help</li>
+                            <li value="5" class="dropdown-item">crosshair</li>
                         </ul>
                     </div>
 
-                    <div class="btn-group" >
+                    <div class="btn-group">
                         <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Colors
@@ -156,15 +155,47 @@
                             aria-expanded="false">
                             Borders
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="border-dropdown">
                             <li value="1" class="dropdown-item">Red</li>
                             <li value="2" class="dropdown-item">Green</li>
                             <li value="3" class="dropdown-item">Blue</li>
                         </ul>
                     </div>
+                    <button type="button" class="btn btn-success" id="reset-all-button"> Reset all </button>
                 </div>
             </div>
         </div>
+
+        <div class="card mt-2 mb-3">
+            <div class="card-header">
+                Paspaudus mygtuką parodykite informacija apie save madlineme lange
+            </div>
+            <div class="card-body d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch modal
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                               OH, Hello, How are you? 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
