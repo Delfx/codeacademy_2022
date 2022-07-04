@@ -12,7 +12,7 @@ getClickMeButton.addEventListener('click', buttonAlert);
 // Input for convert case 
 const getInputForConvert = document.querySelector('#convertTextInput');
 
-//convert text to upper case when bush button "To Upper Case"
+//convert text to upper case when push button "To Upper Case"
 const getUpperCaseButton = document.querySelector('#upperCaseAll');
 
 function upperCaseAll() {
@@ -22,7 +22,7 @@ function upperCaseAll() {
 getUpperCaseButton.addEventListener('click', upperCaseAll);
 
 
-//convert text to lower case when bush button "To Lower Case"
+//convert text to lower case when push button "To Lower Case"
 const getLowerCaseButton = document.querySelector('#lowerCaseAll');
 
 function lowerCaseAll() {
@@ -32,7 +32,7 @@ function lowerCaseAll() {
 getLowerCaseButton.addEventListener('click', lowerCaseAll);
 
 
-//convert text first letter to upper case when bush button "First Upper Case"
+//convert text first letter to upper case when push button "First Upper Case"
 const getupperCaseFirstButton = document.querySelector('#upperCaseFirst');
 
 function capitalizeFirstLetter() {
@@ -46,7 +46,7 @@ getupperCaseFirstButton.addEventListener('click', capitalizeFirstLetter);
 
 
 
-//convert text first letter to lower case when bush button "First Lower Case"
+//convert text first letter to lower case when push button "First Lower Case"
 const getLowerCaseFirstButton = document.querySelector('#lowerCaseFirst');
 
 function lowerFirstLetter() {
