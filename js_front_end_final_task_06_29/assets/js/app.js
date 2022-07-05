@@ -147,4 +147,25 @@ window.addEventListener("DOMContentLoaded", e => {
         textToStyle.style.cursor = 'auto'
     })
 
+
+
+
+
+//forms validation//
+    const forms = document.querySelectorAll('.needs-validation')
+    const submitButton = document.querySelector('#formSubmit')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        submitButton.addEventListener('click', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+
 });
