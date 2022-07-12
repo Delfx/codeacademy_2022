@@ -22,7 +22,6 @@ async function showAllPosts() {
         const createTdUserId = document.createElement('td')
         const createTdTitle = document.createElement('td')
     
-        console.log(post.userId);
         createTdID.textContent = post.id
         createTdUserId.textContent = post.userId
         createTdTitle.textContent = post.title
