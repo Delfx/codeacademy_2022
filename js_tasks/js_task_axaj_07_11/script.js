@@ -11,7 +11,7 @@ async function getPost() {
     }
 }
 
-async function getAll() {
+async function showAllPosts() {
     const posts = await getPost();
     const postTable = document.querySelector('#table-posts');
 
@@ -35,7 +35,7 @@ async function getAll() {
 
 }
 
-getAll()
+showAllPosts()
 
 
 
