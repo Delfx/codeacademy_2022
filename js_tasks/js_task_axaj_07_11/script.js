@@ -45,8 +45,6 @@ async function showAllPosts() {
             const createTdTitle = document.createElement('td')
 
             for (const user of users) {
-                console.log(user.id);
-                console.log(post.userId);
                 if (post.userId == user.id) {
                     createTdID.textContent = post.id
                     createTdUserName.textContent = user.name
