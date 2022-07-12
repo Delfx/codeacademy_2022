@@ -2,8 +2,9 @@
 async function getPost() {
     try {
         let response = await fetch('https://jsonplaceholder.typicode.com/posts')
-        if (!response.ok)
+        if (!response.ok){
             throw new Error("HTTP error " + response.status);
+        }
         let body = await response.json(); // or .json() or whatever
         return body
     } catch (err) {
