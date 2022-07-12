@@ -49,6 +49,7 @@ async function showAllPosts() {
                     createTdID.textContent = post.id
                     createTdUserName.textContent = user.name
                     createTdTitle.textContent = post.title
+                    break;
                 }
             }
 
