@@ -44,12 +44,17 @@ async function showAllPosts() {
             const createTdUserName = document.createElement('td')
             const createTdTitle = document.createElement('td')
 
+
             for (const user of users) {
                 if (post.userId == user.id) {
                     createTdID.textContent = post.id
                     createTdUserName.textContent = user.name
                     createTdTitle.textContent = post.title
                     break;
+                } else{
+                    createTdID.textContent = post.id
+                    createTdUserName.textContent = 'Anonymous'
+                    createTdTitle.textContent = post.title
                 }
             }
 
