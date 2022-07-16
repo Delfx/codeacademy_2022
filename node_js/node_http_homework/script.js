@@ -42,55 +42,47 @@ function makeRequest(method, url) {
   });
 }
 
-function loadTextFileXHR() {
+async function loadTextFileXHR() {
 
-  (async () => {
     try {
       let getText = await makeRequest('GET', 'http://127.0.0.1:3000/gettext')
       textOutput.textContent = getText;
     } catch (err) {
       console.error('There was an error!', err.statusText);
     }
-  })();
+  
   // return;
 }
 
 //-- Load User Information
-function loadUserXHR() {
-  (async () => {
+async function loadUserXHR() {
     try {
       let getUser = await makeRequest('GET', 'http://127.0.0.1:3000/getuser')
       userOutput.textContent = getUser;
     } catch (err) {
       console.error('There was an error!', err.statusText);
     }
-  })();
   // return;
 }
 
 //-- Load Users information
-function loadUsersXHR() {
-  (async () => {
+async function loadUsersXHR() {
     try {
       let getUsers = await makeRequest('GET', 'http://127.0.0.1:3000/getusers')
       usersOutput.textContent = getUsers;
     } catch (err) {
       console.error('There was an error!', err.statusText);
     }
-  })();
-  return;
 }
 
 //-- Load Users information
-function loadPostsXHR() {
-  (async () => {
+async function loadPostsXHR() {
     try {
       let getUsers = await makeRequest('POST', 'http://127.0.0.1:3000/getusers')
       postsOutput.textContent = getUsers;
     } catch (err) {
       console.error('There was an error!', err.statusText);
     }
-  })();
 }
 
 //NEW VERSION AJAX (fetch())
@@ -116,6 +108,7 @@ function loadPostsFETCH() {
 
 // -- Sending data
 function sendPostFETCH() {
+  
   return;
 }
 // *** Events ***
