@@ -8,10 +8,13 @@ const btnGetUser = document.getElementById('btn2');
 const btnGetUsers = document.getElementById('btn3');
 const btnGetPosts = document.getElementById('btn4');
 const btnSendPost = document.getElementById('btn5');
+const btnGetUsersFetch = document.getElementById('btn6');
+
 //-- output
 const textOutput = document.querySelector('#text');
 const userOutput = document.querySelector('#user');
 const usersOutput = document.querySelector('#users');
+const usersOutputFetch = document.querySelector('#usersFetch');
 const postsOutput = document.querySelector('#posts');
 
 // *** Functions ***
@@ -87,7 +90,7 @@ async function loadPostsXHR() {
 
 //NEW VERSION AJAX (fetch())
 // -- Getting data
-function loadPostsFETCH() {
+function loadUsersFETCH() {
 
   const allUsers = async () => {
     try {
@@ -100,7 +103,7 @@ function loadPostsFETCH() {
 
   ((async () => {
     const value = await allUsers();
-    postsOutput.textContent = JSON.stringify(value);
+    usersOutputFetch.textContent = JSON.stringify(value);
 
   })()).catch(console.error)
 
@@ -115,8 +118,8 @@ function sendPostFETCH() {
 btnGetTextFile.addEventListener('click', loadTextFileXHR);
 btnGetUser.addEventListener('click', loadUserXHR);
 btnGetUsers.addEventListener('click', loadUsersXHR);
-// btnGetPosts.addEventListener('click', loadPostsXHR);
-btnGetPosts.addEventListener('click', loadPostsFETCH);
+btnGetPosts.addEventListener('click', loadPostsXHR);
+btnGetUsersFetch.addEventListener('click', loadUsersFETCH);
 btnSendPost.addEventListener('click', sendPostFETCH);
 
 /*
