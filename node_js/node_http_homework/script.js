@@ -45,47 +45,61 @@ function makeRequest(method, url) {
   });
 }
 
+function createUsersDiv (usersJSON, userPlaceInBody){
+  for (let getUser of usersJSON) {
+    const newdiv = document.createElement('div')
+    const newContent = document.createTextNode(`id: ${getUser.id}, Name: ${getUser.name}, Email: ${getUser.email}`)
+    newdiv.className = 'mt-3'
+    newdiv.appendChild(newContent);
+    userPlaceInBody.appendChild(newdiv)
+  }
+}
+
 async function loadTextFileXHR() {
 
-    try {
-      let getText = await makeRequest('GET', 'http://127.0.0.1:3000/gettext')
-      textOutput.textContent = getText;
-    } catch (err) {
-      console.error('There was an error!', err.statusText);
-    }
-  
+  try {
+    let getText = await makeRequest('GET', 'http://127.0.0.1:3000/gettext')
+    textOutput.textContent = getText;
+  } catch (err) {
+    console.error('There was an error!', err.statusText);
+  }
+
   // return;
 }
 
 //-- Load User Information
 async function loadUserXHR() {
-    try {
-      let getUser = await makeRequest('GET', 'http://127.0.0.1:3000/getuser')
-      userOutput.textContent = getUser;
-    } catch (err) {
-      console.error('There was an error!', err.statusText);
-    }
+  try {
+    let getUser = await makeRequest('GET', 'http://127.0.0.1:3000/getuser')
+    const userJSON = JSON.parse(getUser);
+    userOutput.textContent = `id: ${userJSON.id}, Name: ${userJSON.name}, Email: ${userJSON.email}`;
+  } catch (err) {
+    console.error('There was an error!', err.statusText);
+  }
   // return;
 }
 
 //-- Load Users information
 async function loadUsersXHR() {
-    try {
-      let getUsers = await makeRequest('GET', 'http://127.0.0.1:3000/getusers')
-      usersOutput.textContent = getUsers;
-    } catch (err) {
-      console.error('There was an error!', err.statusText);
-    }
+  try {
+    let getUsers = await makeRequest('GET', 'http://127.0.0.1:3000/getusers')
+    const userJSON = JSON.parse(getUsers);
+   
+    createUsersDiv(userJSON, usersOutput);
+
+  } catch (err) {
+    console.error('There was an error!', err.statusText);
+  }
 }
 
 //-- Load Users information
 async function loadPostsXHR() {
-    try {
-      let getUsers = await makeRequest('POST', 'http://127.0.0.1:3000/getusers')
-      postsOutput.textContent = getUsers;
-    } catch (err) {
-      console.error('There was an error!', err.statusText);
-    }
+  try {
+    let getUsers = await makeRequest('POST', 'http://127.0.0.1:3000/getusers')
+    postsOutput.textContent = getUsers;
+  } catch (err) {
+    console.error('There was an error!', err.statusText);
+  }
 }
 
 //NEW VERSION AJAX (fetch())
@@ -103,7 +117,8 @@ function loadUsersFETCH() {
 
   ((async () => {
     const value = await allUsers();
-    usersOutputFetch.textContent = JSON.stringify(value);
+   
+    createUsersDiv(value, usersOutputFetch);
 
   })()).catch(console.error)
 
@@ -111,7 +126,7 @@ function loadUsersFETCH() {
 
 // -- Sending data
 function sendPostFETCH() {
-  
+
   return;
 }
 // *** Events ***
