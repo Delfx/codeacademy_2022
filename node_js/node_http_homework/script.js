@@ -130,12 +130,12 @@ function sendPostFETCH() {
   return;
 }
 // *** Events ***
-btnGetTextFile.addEventListener('click', loadTextFileXHR);
-btnGetUser.addEventListener('click', loadUserXHR);
-btnGetUsers.addEventListener('click', loadUsersXHR);
-btnGetPosts.addEventListener('click', loadPostsXHR);
-btnGetUsersFetch.addEventListener('click', loadUsersFETCH);
-btnSendPost.addEventListener('click', sendPostFETCH);
+btnGetTextFile.addEventListener('click', loadTextFileXHR, {once: true});
+btnGetUser.addEventListener('click', loadUserXHR, {once: true});
+btnGetUsers.addEventListener('click', loadUsersXHR, {once: true});
+btnGetPosts.addEventListener('click', loadPostsXHR, {once: true});
+btnGetUsersFetch.addEventListener('click', loadUsersFETCH, {once: true});
+btnSendPost.addEventListener('click', sendPostFETCH, {once: true});
 
 /*
     readyState Values:
