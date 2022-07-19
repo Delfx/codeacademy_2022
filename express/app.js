@@ -33,7 +33,7 @@ app.get('/os', (req, res) => {
 })
 
 app.get('/cpu', (req, res) => {
-    res.send(`CPU name: ${JSON.stringify(os.cpus()[0].model)}`)
+    res.send(`CPU name: ${JSON.stringify(os.cpus())}`)
 })
 
 app.get('/ram', (req, res) => {
